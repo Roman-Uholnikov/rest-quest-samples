@@ -20,7 +20,9 @@ public class PuzzleService {
     public static Integer KEY_RECORD_1 = null;
     public static Integer KEY_RECORD_2 = null;
 
-    /** each puzzle consist of 2 fields: 0 - puzzle, 1 - answer */
+    /**
+     * each puzzle consist of 2 fields: 0 - puzzle, 1 - answer
+     */
     public static List<List<String>> puzzle = new ArrayList<>();
 
 
@@ -44,7 +46,7 @@ public class PuzzleService {
         Random generator = new Random();
         int randomI = generator.nextInt(puzzle.size());
         List<String> puzzleList = puzzle.get(randomI);
-        return new Puzzle(puzzleList.get(0),puzzleList.get(1));
+        return new Puzzle(puzzleList.get(0), puzzleList.get(1));
     }
 
     public static String getPuzzle(int i) {

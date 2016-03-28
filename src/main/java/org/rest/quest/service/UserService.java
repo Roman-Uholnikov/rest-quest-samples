@@ -1,9 +1,8 @@
 package org.rest.quest.service;
 
 import org.rest.quest.domain.User;
-import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Map;
 import java.util.logging.Logger;
 
 /**

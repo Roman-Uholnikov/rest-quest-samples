@@ -23,9 +23,9 @@ public class RestClientApplication {
         registrationHelper.registerTeam(HOST_URL, "automat", null);
 
         //1st wall
-        String keyword = new MottoHelper().getKeyword(HOST_URL, null, <your team id>, 0, 221);
+        String keyword = new MottoHelper().getKeyword(HOST_URL, null, < your team id>,0, 221);
         //2st wall
-        int secondPuzzle = new PuzzleHelper().readPuzzleHeader(HOST_URL, keyword, <your team id>,  0);
+        int secondPuzzle = new PuzzleHelper().readPuzzleHeader(HOST_URL, keyword, < your team id>,0);
         keyword = PuzzleService.getPuzzle(4);
         //3rd wall
         new UserResolver().readUser(HOST_URL, "keyword", 0);

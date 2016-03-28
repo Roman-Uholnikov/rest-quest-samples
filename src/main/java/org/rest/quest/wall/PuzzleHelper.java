@@ -1,5 +1,6 @@
 package org.rest.quest.wall;
 
+import org.rest.quest.Utils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;

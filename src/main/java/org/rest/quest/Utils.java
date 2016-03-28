@@ -1,14 +1,16 @@
 package org.rest.quest;
 
+import com.google.gson.ExclusionStrategy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Random;
-
-import com.google.gson.ExclusionStrategy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 /**
  * @author Roman Uholnikov
@@ -57,6 +59,20 @@ public class Utils {
             e.printStackTrace();
         }
         return stringBuilder.toString();
+    }
+
+    public static HttpEntity getHttpHeadersEntity(String keyword, int teamId) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("team-id", String.valueOf(teamId));
+        headers.set("keyword", keyword);
+        return new HttpEntity(headers);
+    }
+
+    public static HttpEntity getHttpHeadersEntity(Object requestBody, String keyword, int teamId) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("team-id", String.valueOf(teamId));
+        headers.set("keyword", keyword);
+        return new HttpEntity(requestBody, headers);
     }
 
 

@@ -15,11 +15,11 @@ public class RegistrationHelper {
     public static final Logger logger = Logger.getLogger(RegistrationHelper.class.getSimpleName());
 
 
-    public void registerTeam(String hostUrl, String teamName, String teamMotto){
+    public void registerTeam(String hostUrl, String teamName, String teamMotto) {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
-        Team team =new Team();
+        Team team = new Team();
         team.setName(teamName);
         team.setMotto(teamMotto);
         //team.setMembers(members);
